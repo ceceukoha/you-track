@@ -50,27 +50,31 @@ const page = () => {
     });
   };
 
-  const handleSubmit =(e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if(newJob.title && newJob.company && newJob.location && newJob.salary){
-      setJobs([...jobs,
+    if (newJob.title && newJob.company && newJob.location && newJob.salary) {
+      const updatedJobs = [
+        ...jobs,
         {
           ...newJob,
           id: jobs.length + 1,
-        }, ])
-        setNewJob({
-          title: "",
-          company: "",
-          location: "",
-          salary: "",
-          matchScore: "N/A",
-        })
-        console.log(jobs.length)
-    }
-    else{
+        },
+      ];
+      setJobs(updatedJobs);
+      setFilteredJobs(updatedJobs); // Update filtered jobs to include the new job
+      setNewJob({
+        title: "",
+        company: "",
+        location: "",
+        salary: "",
+        matchScore: "N/A",
+      });
+      console.log("Jobs updated:", updatedJobs.length);
+    } else {
       alert("Please complete form fields");
     }
-  }
+  };
+  
   
   const handleSearch = async (e) => {
     const search = e.target.value;
