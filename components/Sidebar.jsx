@@ -11,7 +11,8 @@ const Sidebar = () => {
   const pathname = usePathname();
   return (
     <aside className="py-4 px-8 bg-muted h-screen sm:w-full md:w-full">
-      <Image src={Logo} alt="logo" className="mx-auto max-w-40" />
+      {/* <Image src={Logo} alt="logo" className="mx-auto  w-12 h-12" /> */}
+      <span className="text-2xl font-extrabold text-black tracking-wide block text-center mt-4">YOU TRACK</span>
       <div className="flex flex-col mt-20 gap-y-4">
         {links.map((link, index, array) => {
           console.log(index, array);

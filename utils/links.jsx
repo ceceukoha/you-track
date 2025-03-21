@@ -1,10 +1,10 @@
-import {AppWindow, AreaChart, Layers} from 'lucide-react';
+import {AppWindow, AreaChart, Layers, Home} from 'lucide-react';
 
 
 const links = [
     {
         href: '/add-job',
-        label: 'Add Job',
+        label: 'Feedback',
         icon: <Layers/>
     },
     {
@@ -16,6 +16,11 @@ const links = [
         href: '/stats',
         label: 'Stats',
         icon: <AreaChart/>
+    },
+    {
+        href: '/',
+        label: 'Home',
+        icon: <Home/>
     }
     
 ]
